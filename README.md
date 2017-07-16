@@ -1,2 +1,2 @@
-# vue-studio
+# vue-samples
 vue projects for learning
