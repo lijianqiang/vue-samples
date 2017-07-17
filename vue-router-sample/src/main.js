@@ -8,7 +8,7 @@ import build from './router/RouterBuilder'
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
 
-const router = build('hash');
+const router = build();
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
