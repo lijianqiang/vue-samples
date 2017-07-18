@@ -1,8 +1,11 @@
 import VueRouter from 'vue-router'
 
 const routes = [
-    { path: '/', component: resolve => require(['../components/Hello.vue'], resolve) },
-    { path: '*', component: resolve => require(['../components/NotFoundComponent.vue'], resolve) },
+    { path: '/', name: 'index', redirect: 'home' },
+    { path: '/home', name: 'home', component: resolve => require(['../pages/home/index.vue'], resolve) },
+    { path: '/user', name: 'user', component: resolve => require(['../pages/user/index.vue'], resolve) },
+    { path: '/code', name: 'code', component: resolve => require(['../pages/code/index.vue'], resolve) },
+    { path: '*', name: '404', component: resolve => require(['../components/NotFoundComponent.vue'], resolve) },
 ]
 
 const scrollBehavior = (to, from, savedPosition) => {
@@ -24,7 +27,7 @@ export default function build(mode = 'history', linkActiveClass = 'router-link-a
         linkActiveClass: linkActiveClass
     });
     console.log(__dirname);
-    console.log(router.options.routes);
+    //console.log(router.options.routes);
 
 
     return router;
