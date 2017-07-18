@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <ul>
-        <li v-for="item in routes">
-            <a href="javascript:;" @click="dispatch(item.name)">{{item.name}}</a>
-        </li>
+      <li v-for="item in routes">
+        <a href="javascript:;" @click="dispatch(item.name)">{{item.name}}</a>
+      </li>
     </ul>
     <router-view></router-view>
   </div>
@@ -12,42 +12,42 @@
 <script>
 export default {
     data () {
-        let all = this.$router.options.routes;
-        let routes = [];
-        for (let item of all) {
-            if (item.name === 'index' || item.name === '404') {
-                continue;
-            }
-            console.log(item);
-            routes.push(item);
+      let all = this.$router.options.routes;
+      let routes = [];
+      for (let item of all) {
+        if (item.name === 'index' || item.name === '404') {
+          continue;
         }
-        return {
-            routes: routes
-        }
+        console.log(item);
+        routes.push(item);
+      }
+      return {
+        routes: routes
+      }
     },
     methods: {
-        dispatch(name) {
-            console.log('click:' + name);
-            if ('index' === name) {
-                this.$router.push('/');
-                return;
-            }
-            this.$router.push(name);
+      dispatch(name) {
+        console.log('click:' + name);
+        if ('index' === name) {
+          this.$router.push('/');
+          return;
         }
+        this.$router.push(name);
+      }
     },
     created () {
-        console.log('created');
+      console.log('created');
     },
     mounted () {
-        console.log('mounted');
+      console.log('mounted');
     },
     updated () {
-        console.log('updated');
+      console.log('updated');
     }
 }
 </script>
 
-<style scoped>
+<style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
