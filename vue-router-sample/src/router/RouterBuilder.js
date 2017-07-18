@@ -9,11 +9,11 @@ const routes = [
 ]
 
 const scrollBehavior = (to, from, savedPosition) => {
-      if (savedPosition) {
+    if (savedPosition) {
         return savedPosition
-      } else {
+    } else {
         return { x: 0, y: 0 }
-      }
+    }
 }
 
 export default function build(mode = 'history', linkActiveClass = 'router-link-active') {
