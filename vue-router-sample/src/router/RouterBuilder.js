@@ -5,7 +5,7 @@ const routes = [
   { path: '/home', name: 'home', ohter: '2', component: resolve => require(['../pages/home/index.vue'], resolve) },
   { path: '/user', name: 'user', ohter: '3', component: resolve => require(['../pages/user/index.vue'], resolve) },
   { path: '/code', name: 'code', ohter: '4', component: resolve => require(['../pages/code/index.vue'], resolve) },
-  { path: '*', name: '404', component: resolve => require(['../components/NotFoundComponent.vue'], resolve) },
+  { path: '*', name: '404', component: resolve => require(['../components/NotFoundComponent.vue'], resolve) }
 ]
 
 const scrollBehavior = (to, from, savedPosition) => {
