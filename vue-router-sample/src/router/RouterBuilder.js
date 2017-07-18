@@ -24,6 +24,7 @@ export default function build(mode = 'history', linkActiveClass = 'router-link-a
         linkActiveClass: linkActiveClass
     });
     console.log(__dirname);
+    console.log(router.options.routes);
 
 
     return router;
