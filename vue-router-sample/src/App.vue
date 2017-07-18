@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <ul>
-        <ol v-for="item in routes">
-            {{item.path}}
-        </ol>
+        <li v-for="item in routes">
+            <a href="javascript:;" @click="dispatch(item.name)">{{item.name}}</a>
+        </li>
     </ul>
     <router-view></router-view>
   </div>
@@ -15,7 +15,7 @@ export default {
         let all = this.$router.options.routes;
         let routes = [];
         for (let item of all) {
-            if (item.name === '404') {
+            if (item.name === 'index' || item.name === '404') {
                 continue;
             }
             console.log(item);
@@ -23,6 +23,16 @@ export default {
         }
         return {
             routes: routes
+        }
+    },
+    methods: {
+        dispatch(name) {
+            console.log('click:' + name);
+            if ('index' === name) {
+                this.$router.push('/');
+                return;
+            }
+            this.$router.push(name);
         }
     },
     created () {
@@ -37,7 +47,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -45,5 +55,22 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
 }
 </style>
