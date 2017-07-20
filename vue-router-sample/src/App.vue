@@ -18,7 +18,7 @@ export default {
         if (item.name === 'index' || item.name === '404') {
           continue;
         }
-        console.log(item);
+        //console.log(item);
         routes.push(item);
       }
       return {

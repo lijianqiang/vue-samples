@@ -29,6 +29,11 @@ export default function build(mode = 'history', linkActiveClass = 'router-link-a
     //console.log(__dirname);
     //console.log(router.options.routes);
 
+    router.beforeEach((to, from, next) => {
+      console.log('beforeEach');
+      console.log(to);
+      next();
+    })
 
     return router;
 }
