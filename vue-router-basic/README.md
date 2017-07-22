@@ -1,4 +1,4 @@
-# vue-router-sample
+# vue-router-basic
 
 > demo
 

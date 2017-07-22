@@ -1,7 +1,7 @@
 {
-  "name": "vue-router-sample",
+  "name": "vue-router-basic",
   "version": "1.0.0",
-  "description": "vue-router-sample",
+  "description": "vue-router-basic",
   "author": "lijianqiang",
   "private": true,
   "scripts": {
