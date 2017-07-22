@@ -4,11 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
 import build from './router/RouterBuilder'
-import httper from './http/HttpClient'
+import http from './http/HttpClient'
 
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
-Vue.prototype.$httper = httper
+Vue.prototype.$http = http
 
 const router = build();
 /* eslint-disable no-new */

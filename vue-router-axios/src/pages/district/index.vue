@@ -19,7 +19,7 @@ export default {
     listProvince() {
       console.log('listProvince');
       let that = this
-      this.$httper.get('/district/provinces')
+      this.$http.get('/district/provinces')
       .then(function (response) {
         console.log(response);
         that.provinces = response.data.data.rows

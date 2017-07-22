@@ -1,7 +1,13 @@
 import axios from 'axios'
 
-var instance = axios.create({
-  baseURL: '/api',
+//const baseURL = process.env.NODE_ENV === 'production' ? 'http://192.168.1.5:20010/' : '/api'
+const proServer = 'http://192.168.1.5:11010/api';
+const devServer = 'http://192.168.1.5:11010/api';
+
+const baseURL = process.env.NODE_ENV === 'production' ? proServer : devServer;
+
+const instance = axios.create({
+  baseURL: baseURL,
   timeout: 2000,
 });
 
@@ -9,6 +15,7 @@ var instance = axios.create({
 // 添加一个请求拦截器
 instance.interceptors.request.use(function (config) {
     // Do something before request is sent
+    console.log('url:' + config.url);
     return config;
   }, function (error) {
     // Do something with request error
