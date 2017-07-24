@@ -14,7 +14,8 @@ const getters = {
 }
 
 const actions = {
-  vListByCondition ({ commit, state }, query) {
+  // vListByCondition: (..) => {}   ===  vListByCondition(..) {}
+  vListByCondition: ({ commit, state }, query) => {
     placerService.listByCondition(query,
       (response) => {
         console.log('vListByCondition onSuccess')
