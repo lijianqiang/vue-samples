@@ -18,8 +18,8 @@ const scrollBehavior = (to, from, savedPosition) => {
 }
 
 export default function build(mode = 'history', linkActiveClass = 'router-link-active') {
-    console.log('now:' + new Date().getTime())
-    console.log('mode:' + mode);
+    //console.log('now:' + new Date().getTime())
+    console.log('route start:mode:' + mode);
     let router = new VueRouter({
       mode: mode,
       routes: routes,
