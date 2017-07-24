@@ -5,6 +5,7 @@ import App from './App'
 import VueRouter from 'vue-router'
 import build from './router/RouterBuilder'
 import http from './http/HttpClient'
+import store from './store'
 
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
@@ -15,5 +16,6 @@ const router = build();
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 });

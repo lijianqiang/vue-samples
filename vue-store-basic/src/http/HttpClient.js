@@ -2,7 +2,7 @@ import axios from 'axios'
 
 //const baseURL = process.env.NODE_ENV === 'production' ? 'http://192.168.1.5:20010/' : '/api'
 const proServer = 'http://192.168.1.5:11010/api';
-const devServer = 'http://192.168.1.5:11010/api';
+const devServer = 'http://10.206.16.139:11010/api';
 
 const baseURL = process.env.NODE_ENV === 'production' ? proServer : devServer;
 
