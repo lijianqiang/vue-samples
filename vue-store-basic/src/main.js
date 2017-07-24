@@ -3,8 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
-import build from './router/RouterBuilder'
-import http from './http/HttpClient'
+import build from './router/router-build'
+import http from './http/http-client'
 import store from './store'
 
 Vue.use(VueRouter);

@@ -17,10 +17,9 @@ const actions = {
   vListByCondition ({ commit, state }, query) {
     placerService.listByCondition(query,
       (response) => {
-        console.log('onSuccess')
-        console.log(response.data.data)
+        console.log('vListByCondition onSuccess')
         // TODO
-        //commit(types.PLACER_SET_LIST_RESPONSE, response.data.data)
+        commit(types.PLACER_SET_LIST_RESPONSE, response.data.data)
       },
       (error) => {
         console.log(error)
@@ -29,7 +28,7 @@ const actions = {
 }
 
 const mutations = {
-  [types.PLACER_SET_LIST_RESPONSE] (state, { data }) {
+  [types.PLACER_SET_LIST_RESPONSE] (state, data) {
       state.params = data.params
       state.placers = data.rows
       state.page = data.page

@@ -1,4 +1,4 @@
-import http from '../../http/HttpClient'
+import http from '../../http/http-client'
 
 const PlacerService = {
   listByCondition: (query, onSuccess, onError) => {
