@@ -19,7 +19,8 @@ const actions = {
       (response) => {
         console.log('onSuccess')
         console.log(response.data.data)
-        commit(types.PLACER_SET_LIST_RESPONSE, response.data.data)
+        // TODO
+        //commit(types.PLACER_SET_LIST_RESPONSE, response.data.data)
       },
       (error) => {
         console.log(error)
