@@ -10,7 +10,9 @@ const state = {
 
 const getters = {
   size: state => state.placers.length,
-  placers: state => state.placers
+  placers: state => state.placers,
+  page: state => state.page,
+  total: state => state.total
 }
 
 const actions = {
