@@ -21,7 +21,7 @@ export default {
       let that = this
       this.$http.get('/district/provinces')
       .then(function (response) {
-        console.log(response);
+        //console.log(response);
         that.provinces = response.data.data.rows
       })
       .catch(function (error) {
@@ -30,10 +30,10 @@ export default {
     }
   },
   created () {
-    console.log('created');
+    //console.log('created');
   },
   mounted () {
-    console.log('mounted');
+    //console.log('mounted');
     this.listProvince();
   }
 }

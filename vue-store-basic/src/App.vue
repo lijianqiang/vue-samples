@@ -36,13 +36,13 @@ export default {
     }
   },
   created () {
-    console.log('created');
+    //console.log('created');
   },
   mounted () {
-    console.log('mounted');
+    //console.log('mounted');
   },
   updated () {
-    console.log('updated');
+    //console.log('updated');
   }
 }
 </script>

@@ -2,9 +2,9 @@ import VueRouter from 'vue-router'
 
 const routes = [
   { path: '/', name: 'index', other: '1', redirect: 'home' },
-  { path: '/home', name: 'home', other: '2', component: resolve => require(['../pages/home/index.vue'], resolve) },
-  { path: '/user', name: 'user', other: '3', component: resolve => require(['../pages/user/index.vue'], resolve) },
-  { path: '/district', name: 'district', other: '4', component: resolve => require(['../pages/district/index.vue'], resolve) },
+  { path: '/home', name: 'home', other: '2', component: resolve => require(['../pages/home/Index.vue'], resolve) },
+  { path: '/user', name: 'user', other: '3', component: resolve => require(['../pages/user/Index.vue'], resolve) },
+  { path: '/district', name: 'district', other: '4', component: resolve => require(['../pages/district/Index.vue'], resolve) },
   { path: '/placer', name: 'placer', other: '5', component: resolve => require(['../pages/placer/Index.vue'], resolve) },
   { path: '*', name: '404', component: resolve => require(['../components/NotFoundComponent.vue'], resolve) }
 ]
